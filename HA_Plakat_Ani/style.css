@@ -1,0 +1,109 @@
+body{
+    color: blue;
+}
+.section {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+  }
+
+.poster {
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 700px;
+    padding-top: 48px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(2, 59, 163);}
+
+.circle{
+    position: absolute;
+    top:340px;
+    margin-left: 16px;   
+    height: 310px;
+    width: 310px;
+    border-radius: 50%;
+    border: solid rgb(219, 219, 219) 6px;
+    display: inline-block;
+    animation: 7s linear infinite;
+    animation-name: circle;
+    
+}
+
+.block{
+    position: absolute;
+    top:530px;
+    height: 220px;
+    width: 500px;
+    background-color:rgb(4, 121, 121);
+    display:block;
+    animation: 7s linear infinite;
+    animation-name: block;
+
+}
+
+@keyframes block {
+    0% {
+ }
+ 50%{
+    transform:translate(0, -550px);
+ }
+ 
+ 100% {
+ 
+ }
+}
+
+.text{
+    position:absolute;
+    top: 200px;
+    font-size: 50px;
+    font-family:helvetica;
+    letter-spacing:-1px ;
+    font-style: black;
+    color:rgb(219, 219, 219);
+    animation: 7s linear infinite;
+    animation-name: text;
+   
+}
+@keyframes text {
+     0% {
+    /*transform: skewY(10deg);*/
+  }
+  25%{
+      /*transform: skewY(-10deg);*/
+      color: rgb(2, 59, 163);
+  }
+  75%{/*transform: skewY(-10deg);*/
+    color: rgb(2, 59, 163);}
+  100% {
+    /*transform: skewY(10deg);*/
+  }
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(1.5) ;
+        border-color: rgb(2, 59, 163);
+
+      }
+      20% {transform: scale(1);
+        border-color:rgb(4, 121, 121);
+
+    }
+      50% {
+        transform: scale(0.5) ;
+        color:rgb(219, 219, 219);
+    }
+      80% {transform: scale(1);
+        border-color:rgb(4, 121, 121);
+    }
+      100% {
+        transform: scale(1.5) ;
+        border-color: rgb(2, 59, 163);
+    }
+    }
+}
